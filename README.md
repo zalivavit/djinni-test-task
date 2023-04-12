@@ -1,1 +1,1 @@
-# djinni-test-task
+# Test task for Djinni from Vitalii Zalyva
