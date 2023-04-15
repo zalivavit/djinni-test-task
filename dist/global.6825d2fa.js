@@ -6958,19 +6958,27 @@ function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyri
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 document.addEventListener('DOMContentLoaded', function () {
+  // Navbar toggle 
+  var navLinks = document.querySelectorAll('.navbar-nav-toggle .nav-link');
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      navLinks.forEach(function (link) {
+        link.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+
   // Cards tabs 
   var select = document.querySelector('.form-select');
   select.addEventListener('change', selectTab);
   function selectTab() {
     var selectedValue = select.value;
     var tabPanes = document.querySelectorAll('.tab-pane');
-
-    // remove active and show classes from all tab panes
     tabPanes.forEach(function (tabPane) {
       tabPane.classList.remove('active', 'show');
     });
-
-    // add active and show classes to selected tab pane
     var selectedTabPane = document.querySelector("#".concat(selectedValue));
     if (selectedTabPane) {
       selectedTabPane.classList.add('active', 'show');
@@ -7028,7 +7036,7 @@ document.addEventListener('DOMContentLoaded', function () {
     data.forEach(function (item) {
       var card = document.createElement('div');
       card.classList.add('col');
-      card.innerHTML = "\n        <div class=\"card h-100\">\n          <div class=\"card-image\">\n            <img src=\"".concat(item.download_url, "\" class=\"card-img-top\" alt=\"...\">\n          </div>\n          <div class=\"card-body\">\n            <h4 class=\"card-title fw-bold\">").concat(item.author, "</h4>\n            <p class=\"card-text card-text-expandable\">").concat(item.width, "x").concat(item.height, " pixels</p>\n          </div>\n          <div class=\"card-footer bg-white d-flex align-items-center gap-3 flex-wrap\">\n            <button type=\"button\" class=\"btn btn-primary text-white fw-bold\">Save to collection</button>\n            <button type=\"button\" class=\"btn btn-outline-secondary text-black fw-bold\">Share</button>\n          </div>\n        </div>\n      ");
+      card.innerHTML = "\n        <div class=\"card h-100\">\n          <div class=\"card-image\">\n            <img src=\"".concat(item.download_url, "\" class=\"card-img-top\" alt=\"").concat(item.author, "\">\n          </div>\n          <div class=\"card-body\">\n            <h4 class=\"card-title fw-bold\">").concat(item.author, "</h4>\n            <p class=\"card-text card-text-expandable\">").concat(item.width, "x").concat(item.height, " pixels</p>\n          </div>\n          <div class=\"card-footer bg-white d-flex align-items-center gap-3 flex-wrap\">\n            <button type=\"button\" class=\"btn btn-primary text-white fw-bold\">Save to collection</button>\n            <button type=\"button\" class=\"btn btn-outline-secondary text-black fw-bold\">Share</button>\n          </div>\n        </div>\n      ");
       cardContainer.appendChild(card);
     });
   }
@@ -7108,7 +7116,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64535" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52971" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

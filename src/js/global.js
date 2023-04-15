@@ -4,6 +4,20 @@
 import * as bootstrap from 'bootstrap';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Navbar toggle 
+  const navLinks = document.querySelectorAll('.navbar-nav-toggle .nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      this.classList.add('active');
+    });
+  });
 
   // Cards tabs 
   const select = document.querySelector('.form-select');
@@ -14,12 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tabPanes = document.querySelectorAll('.tab-pane');
 
-    // remove active and show classes from all tab panes
     tabPanes.forEach(tabPane => {
       tabPane.classList.remove('active', 'show');
     });
 
-    // add active and show classes to selected tab pane
     const selectedTabPane = document.querySelector(`#${selectedValue}`);
     if (selectedTabPane) {
       selectedTabPane.classList.add('active', 'show');
@@ -65,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="card h-100">
           <div class="card-image">
-            <img src="${item.download_url}" class="card-img-top" alt="...">
+            <img src="${item.download_url}" class="card-img-top" alt="${item.author}">
           </div>
           <div class="card-body">
             <h4 class="card-title fw-bold">${item.author}</h4>
