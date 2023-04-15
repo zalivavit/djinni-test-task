@@ -10738,6 +10738,9 @@ textarea.form-control-lg {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.card-text {
+  color: rgba(0, 0, 0, 0.5);
+}
 
 .content-sort-group .btn-check:checked + label {
   color: #fff;
@@ -10750,6 +10753,44 @@ textarea.form-control-lg {
 
 .nav-tabs-aside .nav-link:not(.active) {
   color: #000;
+}
+
+.navbar-nav-toggle .nav-link.active {
+  text-shadow: 1px 0 0 #000;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav-toggle .nav-link {
+    position: relative;
+  }
+  .navbar-nav-toggle .nav-link::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -0.55rem;
+    width: 0;
+    height: 1px;
+    background-color: #ec7135;
+    transition: width 0.2s ease-in-out;
+  }
+  .navbar-nav-toggle .nav-link.active::after {
+    width: 100%;
+  }
+}
+.input-group {
+  position: relative;
+}
+.input-group .bi-search {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  translate: 0 -50%;
+}
+
+.form-control:focus,
+.form-select:focus,
+.navbar-toggler:focus {
+  box-shadow: 0 0 0.3rem 0.01rem rgba(236, 113, 53, 0.3);
 }
 
 /*# sourceMappingURL=/custom.45b3fe80.css.map */

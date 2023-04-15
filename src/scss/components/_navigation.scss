@@ -1,0 +1,32 @@
+.navbar-nav-toggle {
+  .nav-link {
+    &.active {
+      text-shadow: 1px 0 0 $color-contrast-dark;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-nav-toggle {
+    .nav-link {
+      position: relative;
+  
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -.55rem;
+        width: 0;
+        height: 1px;
+        background-color: $primary;
+        transition: width .2s ease-in-out;
+      }
+  
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
