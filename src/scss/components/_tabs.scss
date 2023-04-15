@@ -1,0 +1,5 @@
+.nav-tabs-aside {
+  .nav-link:not(.active) {
+    color: $btn-nav-tab-color;
+  }
+}

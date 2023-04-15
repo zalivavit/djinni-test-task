@@ -1,0 +1,23 @@
+.card {
+  &-image {
+    position: relative;
+    padding-top: 70%;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-text-expandable:not(&-text-clipped) {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
