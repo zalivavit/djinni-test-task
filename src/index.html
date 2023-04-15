@@ -64,6 +64,149 @@
           </div>
         </nav>
     </header>  
+    <main>
+      <div class="container">
+        <div class="row pt-5 pb-5">
+          <aside class="col-lg-3">
+            <ul class="nav nav-tabs nav-tabs-aside nav-pills flex-column border-bottom-0 d-none d-lg-block" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active w-100 text-start d-flex aling-items-center gap-2" id="all-photos-tab" data-bs-toggle="tab" data-bs-target="#all-photos" type="button" role="tab" aria-controls="photos" aria-selected="true">
+                  <i class="bi bi-image"></i>
+                  All photos
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-star d-flex aling-items-center gap-2" id="selfies-tab" data-bs-toggle="tab" data-bs-target="#selfies" type="button" role="tab" aria-controls="selfies" aria-selected="false">
+                  <i class="bi bi-emoji-smile"></i>
+                  Selfies
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start d-flex aling-items-center gap-2" id="recent-tab" data-bs-toggle="tab" data-bs-target="#recent" type="button" role="tab" aria-controls="recent" aria-selected="false">
+                  <i class="bi bi-clock"></i>
+                  Recent
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link w-100 text-start d-flex aling-items-center gap-2" id="deleted-tab" data-bs-toggle="tab" data-bs-target="#deleted" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                  <i class="bi bi-trash"></i>
+                  Deleted
+                </button>
+              </li>
+            </ul>
+            <select class="form-select d-block d-lg-none mb-4" aria-label="Select a tab">
+              <option value="all-photos">All photos</option>
+              <option value="selfies">Selfies</option>
+              <option value="recent">Recent</option>
+              <option value="deleted">Deleted</option>
+            </select>
+            
+          </aside>
+          <section class="col-lg-8 ms-lg-auto">
+            <div class="tab-content" id="contentList">
+              <div class="tab-pane fade show active" id="all-photos" role="tabpanel" aria-labelledby="all-photos-tab">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <h1 class="fw-bold mb-0">All photos</h1>
+                  <div class="btn-group content-sort-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary fw-bold" for="btnradio1">Newest</label>
+                  
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-secondary fw-bold" for="btnradio2">Latest</label>
+                  </div>
+                </div>
+                <div class="mt-2 text-secondary fw-bold fs-6 text-black-50">
+                  <p>150 items</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-4 mt-1 mt-lg-3" id="card-list">
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <h4 class="card-title fw-bold">Card title</h4>
+                        <p class="card-text card-text-expandable">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                        <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
+                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <h4 class="card-title fw-bold">Card title</h4>
+                        <p class="card-text card-text-expandable">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                        <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
+                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <h4 class="card-title fw-bold">Card title</h4>
+                        <p class="card-text card-text-expandable">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                        <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
+                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body">
+                        <h4 class="card-title fw-bold">Card title</h4>
+                        <p class="card-text card-text-expandable">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                        <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
+                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="selfies" role="tabpanel" aria-labelledby="selfies-tab">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                    Selfies
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="recent" role="tabpanel" aria-labelledby="recent-tab">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                    Recent
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="deleted" role="tabpanel" aria-labelledby="deleted-tab">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                  <div class="col">
+                    Deleted
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
     <script src="./js/global.js"></script>
   </body>
 </html>

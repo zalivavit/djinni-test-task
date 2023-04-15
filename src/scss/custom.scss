@@ -1,6 +1,17 @@
 $primary: #ec7135;
-$secondary: #eee;
+$secondary: #dee2e6;
+
+$color-contrast-light: #fff;
+$color-contrast-dark: #000;
+
+$btn-custom-sort-color: $color-contrast-dark;
+$btn-active-custom-sort-color: $color-contrast-light;
+$btn-active-custom-sort-background-color: $color-contrast-dark;
+$btn-active-custom-sort-border-color: $color-contrast-dark;
+
+$btn-nav-tab-color: $color-contrast-dark;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "./components/header.scss";
-@import "./components/forms.scss"
+@import "./components/card.scss";
+@import "./components/buttons.scss";
+@import "./components/tabs.scss";

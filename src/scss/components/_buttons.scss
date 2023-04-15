@@ -1,0 +1,11 @@
+.content-sort-group {
+  .btn-check:checked + label {
+    color: $btn-active-custom-sort-color;
+    background-color: $btn-active-custom-sort-background-color;
+    border-color: $btn-active-custom-sort-border-color;
+  }
+
+  .btn-check:not(:checked) + label {
+    color: $btn-custom-sort-color;
+  }
+}
