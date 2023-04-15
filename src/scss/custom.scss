@@ -1,1 +1,6 @@
+$primary: #ec7135;
+$secondary: #eee;
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./components/header.scss";
+@import "./components/forms.scss"
