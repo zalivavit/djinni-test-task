@@ -10852,7 +10852,7 @@ textarea.form-control-lg {
   --bs-btn-hover-color: #202020;
 }
 .theme-dark .input-group {
-  border: 1px solid #fff;
+  box-shadow: 0 0 0 1px #fff;
 }
 .theme-dark .bi {
   color: #fff;
