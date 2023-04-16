@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./scss/custom.scss">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Test task</title>
   </head>
-  <body>
+  <body class="theme-dark">
     <header class="site-header border-bottom">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white pt-4">
+        <nav class="navbar navbar-expand-lg navbar-light pt-4 pb-lg-2 pb-4">
           <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -30,30 +31,38 @@
                 </div>
                 <div class="col-lg-8 ms-lg-auto pe-0">
                   <div class="row">
-                    <div class="col-xxl-10 col-xl-9 col-lg-9 mb-lg-0 mb-2">
+                    <div class="col-xxl-9 col-xl-8 col-lg-8 mb-lg-0 mb-2 pe-0">
                       <form class="d-flex">
                         <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-                        <div class="input-group bg-secondary rounded-pill">
-                          <i class="bi bi-search text-black-50"></i>
-                          <input type="text" class="form-control border-0 bg-transparent rounded-pill ps-5" id="autoSizingInputGroup" placeholder="Search for anything...">
+                        <div class="input-group rounded-pill">
+                          <i class="bi bi-search"></i>
+                          <input type="text" class="form-control border-0 rounded-pill ps-5" id="autoSizingInputGroup" placeholder="Search for anything...">
                         </div>
                       </form>
                     </div>
-                    <div class="col-xxl-2 col-xl-3 col-lg-3 px-lg-0">
-                      <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end gap-lg-3">
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle px-lg-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Ukranian</a></li>
-                            <li><a class="dropdown-item" href="#">French</a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link px-lg-0" href="#">Sign In</a>
-                        </li>
-                      </ul>
+                    <div class="col-xxl-3 col-xl-4 col-lg-4 px-lg-0">
+                      <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-end gap-lg-3 gap-1">
+                        <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end gap-lg-3">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-lg-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              English
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#">Ukranian</a></li>
+                              <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link px-lg-0" href="#">Sign In</a>
+                          </li>
+                        </ul>
+                        <div class="form-check form-switch d-flex align-items-center gap-2">
+                          <input class="form-check-input bg-transparent" type="checkbox" id="colorThemeSwitch">
+                          <label class="form-check-label" for="colorThemeSwitch">
+                            <img src="https://i.ibb.co/7JfqXxB/sunny.png" width="16" height="16" alt="Sun">
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -105,15 +114,15 @@
               <div class="tab-pane fade show active" id="all-photos" role="tabpanel" aria-labelledby="all-photos-tab">
                 <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                   <h1 class="fw-bold mb-0">All photos</h1>
-                  <div class="btn-group content-sort-group" role="group" aria-label="Basic radio toggle button group">
+                  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-secondary fw-bold" for="btnradio1">Newest</label>
+                    <label class="btn btn-outline-dark fw-bold" for="btnradio1">Newest</label>
                   
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-secondary fw-bold" for="btnradio2">Latest</label>
+                    <label class="btn btn-outline-dark fw-bold" for="btnradio2">Latest</label>
                   </div>
                 </div>
-                <div class="mt-2 text-secondary fw-bold fs-6 text-black-50">
+                <div class="mt-2 text-muted fw-bold fs-6">
                   <p>150 items</p>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 g-4 mt-1 mt-lg-3" id="card-list">
@@ -124,56 +133,56 @@
                       </div>
                       <div class="card-body">
                         <h4 class="card-title fw-bold">Heading</h4>
-                        <p class="card-text card-text-expandable">A photograph (also known as a photo, image, or picture) is an image created by light falling on a photosensitive surface, usually photographic film or an electronic image sensor, such as a CCD or a CMOS chip. Most photographs are now created using a smartphone/camera, which uses a lens to focus the scene's visible wavelengths of light into a reproduction of what the human eye would see. The process and practice of creating such images is called photography.</p>
+                        <p class="card-text card-text-expandable text-muted">A photograph (also known as a photo, image, or picture) is an image created by light falling on a photosensitive surface, usually photographic film or an electronic image sensor, such as a CCD or a CMOS chip. Most photographs are now created using a smartphone/camera, which uses a lens to focus the scene's visible wavelengths of light into a reproduction of what the human eye would see. The process and practice of creating such images is called photography.</p>
                       </div>
-                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                      <div class="card-footer d-flex align-items-center gap-3 flex-wrap">
                         <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
-                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                        <button type="button" class="btn btn-outline-secondary fw-bold">Share</button>
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card h-100">
                       <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="Image">
+                        <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="card-img-top" alt="Image">
                       </div>
                       <div class="card-body">
                         <h4 class="card-title fw-bold">Heading</h4>
-                        <p class="card-text card-text-expandable">Color photography is almost as old as black-and-white, with early experiments including John Herschel's Anthotype prints in 1842, the pioneering work of Louis Ducos du Hauron in the 1860s.</p>
+                        <p class="card-text card-text-expandable text-muted">Color photography is almost as old as black-and-white, with early experiments including John Herschel's Anthotype prints in 1842, the pioneering work of Louis Ducos du Hauron in the 1860s.</p>
                       </div>
-                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                      <div class="card-footer d-flex align-items-center gap-3 flex-wrap">
                         <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
-                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                        <button type="button" class="btn btn-outline-secondary fw-bold">Share</button>
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card h-100">
                       <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="Image">
+                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" class="card-img-top" alt="Image">
                       </div>
                       <div class="card-body">
                         <h4 class="card-title fw-bold">Heading</h4>
-                        <p class="card-text card-text-expandable">Non-digital photographs are produced with a two-step chemical process.</p>
+                        <p class="card-text card-text-expandable text-muted">Non-digital photographs are produced with a two-step chemical process.</p>
                       </div>
-                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                      <div class="card-footer d-flex align-items-center gap-3 flex-wrap">
                         <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
-                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                        <button type="button" class="btn btn-outline-secondary fw-bold">Share</button>
                       </div>
                     </div>
                   </div>
                   <div class="col">
                     <div class="card h-100">
                       <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="Image">
+                        <img src="https://images.unsplash.com/photo-1552083974-186346191183?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Image">
                       </div>
                       <div class="card-body">
                         <h4 class="card-title fw-bold">Heading</h4>
-                        <p class="card-text card-text-expandable">Originally, all photographs were monochromatic or hand-painted in color. Although methods for developing color photos were available as early as 1861, they did not become widely available until the 1940s or 1950s, and even so, until the 1960s most photographs were taken in black and white.</p>
+                        <p class="card-text card-text-expandable text-muted">Originally, all photographs were monochromatic or hand-painted in color. Although methods for developing color photos were available as early as 1861, they did not become widely available until the 1940s or 1950s, and even so, until the 1960s most photographs were taken in black and white.</p>
                       </div>
-                      <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+                      <div class="card-footer d-flex align-items-center gap-3 flex-wrap">
                         <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
-                        <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+                        <button type="button" class="btn btn-outline-secondary fw-bold">Share</button>
                       </div>
                     </div>
                   </div>

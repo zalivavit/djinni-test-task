@@ -6970,6 +6970,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Theme switcher
+  var colorThemeSwitch = document.getElementById('colorThemeSwitch');
+  var themeImage = document.querySelector('#colorThemeSwitch + label img');
+  localStorage.getItem('theme') === 'theme-dark' ? setDarkTheme() : setLightTheme();
+  colorThemeSwitch.addEventListener('change', function () {
+    return colorThemeSwitch.checked ? setDarkTheme() : setLightTheme();
+  });
+  function setDarkTheme() {
+    document.body.classList.add('theme-dark');
+    themeImage.src = 'https://i.ibb.co/FxzBYR9/night.png';
+    localStorage.setItem('theme', 'theme-dark');
+  }
+  function setLightTheme() {
+    document.body.classList.remove('theme-dark');
+    themeImage.src = 'https://i.ibb.co/7JfqXxB/sunny.png';
+    localStorage.setItem('theme', 'theme-light');
+  }
+  localStorage.getItem('theme') === 'theme-dark' && (colorThemeSwitch.checked = true);
+
   // Cards tabs 
   var select = document.querySelector('.form-select');
   select.addEventListener('change', selectTab);
@@ -6990,7 +7009,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (expandableText.clientHeight < expandableText.scrollHeight) {
       expandableText.classList.add('card-text-expandable-toggle');
       var expandButton = document.createElement('button');
-      expandButton.classList.add('card-text-expandable-btn', 'btn', 'btn-link', 'p-0', 'text-black', 'text-decoration-none');
+      expandButton.classList.add('card-text', 'card-text-expandable-btn', 'btn', 'btn-link', 'p-0', 'text-decoration-none');
       expandButton.textContent = 'Show more...';
       expandButton.addEventListener('click', function () {
         expandableText.classList.toggle('card-text-expandable-toggle');
@@ -7036,7 +7055,7 @@ document.addEventListener('DOMContentLoaded', function () {
     data.forEach(function (item) {
       var card = document.createElement('div');
       card.classList.add('col');
-      card.innerHTML = "\n        <div class=\"card h-100\">\n          <div class=\"card-image\">\n            <img src=\"".concat(item.download_url, "\" class=\"card-img-top\" alt=\"").concat(item.author, "\">\n          </div>\n          <div class=\"card-body\">\n            <h4 class=\"card-title fw-bold\">").concat(item.author, "</h4>\n            <p class=\"card-text card-text-expandable\">").concat(item.width, "x").concat(item.height, " pixels</p>\n          </div>\n          <div class=\"card-footer bg-white d-flex align-items-center gap-3 flex-wrap\">\n            <button type=\"button\" class=\"btn btn-primary text-white fw-bold\">Save to collection</button>\n            <button type=\"button\" class=\"btn btn-outline-secondary text-black fw-bold\">Share</button>\n          </div>\n        </div>\n      ");
+      card.innerHTML = "\n        <div class=\"card h-100\">\n          <div class=\"card-image\">\n            <img src=\"".concat(item.download_url, "\" class=\"card-img-top\" alt=\"").concat(item.author, "\">\n          </div>\n          <div class=\"card-body\">\n            <h4 class=\"card-title fw-bold\">").concat(item.author, "</h4>\n            <p class=\"card-text card-text-expandable text-muted\">").concat(item.width, "x").concat(item.height, " pixels</p>\n          </div>\n          <div class=\"card-footer d-flex align-items-center gap-3 flex-wrap\">\n            <button type=\"button\" class=\"btn btn-primary text-white fw-bold\">Save to collection</button>\n            <button type=\"button\" class=\"btn btn-outline-secondary fw-bold\">Share</button>\n          </div>\n        </div>\n      ");
       cardContainer.appendChild(card);
     });
   }
@@ -7116,7 +7135,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52971" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54384" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
