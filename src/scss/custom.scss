@@ -101,7 +101,7 @@ $btn-link-color: $color-contrast-dark;
   }
 
   .input-group {
-    border: 1px solid $color-contrast-light;
+    box-shadow: 0 0 0 1px $color-contrast-light;
   }
 
   .bi {
