@@ -19,6 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Theme switcher
+  const colorThemeSwitch = document.getElementById('colorThemeSwitch');
+  const themeImage = document.querySelector('#colorThemeSwitch + label img');
+  
+  localStorage.getItem('theme') === 'theme-dark' ? setDarkTheme() : setLightTheme();
+  
+  colorThemeSwitch.addEventListener('change', () => colorThemeSwitch.checked ? setDarkTheme() : setLightTheme());
+  
+  function setDarkTheme() {
+    document.body.classList.add('theme-dark');
+    themeImage.src = 'https://i.ibb.co/FxzBYR9/night.png';
+    localStorage.setItem('theme', 'theme-dark');
+  }
+  
+  function setLightTheme() {
+    document.body.classList.remove('theme-dark');
+    themeImage.src = 'https://i.ibb.co/7JfqXxB/sunny.png';
+    localStorage.setItem('theme', 'theme-light');
+  }
+  
+  localStorage.getItem('theme') === 'theme-dark' && (colorThemeSwitch.checked = true);
+  
   // Cards tabs 
   const select = document.querySelector('.form-select');
   select.addEventListener('change', selectTab);
@@ -44,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       expandableText.classList.add('card-text-expandable-toggle');
 
       const expandButton = document.createElement('button');
-      expandButton.classList.add('card-text-expandable-btn', 'btn', 'btn-link', 'p-0', 'text-black', 'text-decoration-none');
+      expandButton.classList.add('card-text', 'card-text-expandable-btn', 'btn', 'btn-link', 'p-0', 'text-decoration-none');
       expandButton.textContent = 'Show more...';
 
       expandButton.addEventListener('click', () => {
@@ -81,11 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="card-body">
             <h4 class="card-title fw-bold">${item.author}</h4>
-            <p class="card-text card-text-expandable">${item.width}x${item.height} pixels</p>
+            <p class="card-text card-text-expandable text-muted">${item.width}x${item.height} pixels</p>
           </div>
-          <div class="card-footer bg-white d-flex align-items-center gap-3 flex-wrap">
+          <div class="card-footer d-flex align-items-center gap-3 flex-wrap">
             <button type="button" class="btn btn-primary text-white fw-bold">Save to collection</button>
-            <button type="button" class="btn btn-outline-secondary text-black fw-bold">Share</button>
+            <button type="button" class="btn btn-outline-secondary fw-bold">Share</button>
           </div>
         </div>
       `;
